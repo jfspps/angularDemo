@@ -27,3 +27,7 @@ Navigate to `/src/app/` and edit `appcomponent.html`. Changes to this file are a
 ## Appcomponent.ts ##
 
 This iss found in `/src/app` and can list the app components given in `appcomponent.html` (they are enclosed in `{{ }}`). An added component to the list and then initialising it can be then be bound to the single HTML file.
+
+## Bootstrap styling ##
+
+Use `npm` to install Bootstrap 3 (version 4 still experimental at this stage) with `npm i boostrap@3`. Then add `@import '~bootstrap/dist/css/bootstrap.min.css';` to [style.css](./src/styles.css).
