@@ -1,5 +1,7 @@
 # AngularDemo
 
+See [here](./Instructions.md) for instructions about setting up Angular. See [here](./Angular.md) for an overview of how Angular loads.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
 ## Development server
