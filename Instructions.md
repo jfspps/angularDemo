@@ -31,3 +31,7 @@ This iss found in `/src/app` and can list the app components given in `appcompon
 ## Bootstrap styling ##
 
 Use `npm` to install Bootstrap 3 (version 4 still experimental at this stage) with `npm i boostrap@3`. Then add `@import '~bootstrap/dist/css/bootstrap.min.css';` to [style.css](./src/styles.css).
+
+## Visual Studio Code watchers ##
+
+Go [here](https://code.visualstudio.com/docs/setup/linux) to raise the limit of file changes (watchers) while running `ng serve`.
