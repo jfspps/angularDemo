@@ -1,9 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-// added to enable forms features
-import { FormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -11,7 +7,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
