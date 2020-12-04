@@ -3,6 +3,7 @@
 <!-- [] enclose tag properties for Angular to recognise -->
 <!-- () enclose Angular bound events -->
 <!-- {{}} enclose string objects -->
+<!-- [()] for two-way data binding -->
 
 <hr>
 
@@ -14,9 +15,14 @@
 
 <app-server></app-server>
 
-<label>Input some text:</label>
+<label>Input some text ('one-way' binding: data moves from input box to paragraph):</label>
 <!-- $event is reserved word and used a argument token -->
 <input type="text" class="form-control" (input)="onTypeText($event)">
 <p>{{ inputText }}</p>
 
 <app-server></app-server>
+
+<label>Input some more text (two-way data-binding: data moves between both input box and paragraph):</label>
+<input type="text" class="form-control" [(ngModel)]="someString">
+<!-- trigger an event and update someString at the same time -->
+<p>{{ someString }}</p>

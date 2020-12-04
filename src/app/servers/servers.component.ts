@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created';
   inputText = 'Enter some text above';
+  someString = 'Note how the text is already preset here'
 
   constructor() {
     setTimeout(() => {
