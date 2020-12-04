@@ -14,4 +14,9 @@
 
 <app-server></app-server>
 
+<label>Input some text:</label>
+<!-- $event is reserved word and used a argument token -->
+<input type="text" class="form-control" (input)="onTypeText($event)">
+<p>{{ inputText }}</p>
+
 <app-server></app-server>
