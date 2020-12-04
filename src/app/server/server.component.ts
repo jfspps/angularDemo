@@ -9,5 +9,11 @@ import { Component } from '@angular/core';
                                             // use template instead of templateURL not both (similarly, styles can be run inline or from a CSS file)
 })
 export class ServerComponent {
+    // type is implied and not strictly required
+    serverId: number = 101;
+    serverStatus: string = 'online';
 
+    getServerStatus(){
+        return this.serverStatus;
+    }
 }
