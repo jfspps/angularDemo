@@ -1,6 +1,16 @@
 <button class="btn btn-primary" [disabled]="!allowNewServer" >Add server</button>
 
-<div class="btn btn-secondary">Add server</div>
+<!-- [] enclose tag properties for Angular to recognise -->
+<!-- () enclose Angular bound events -->
+<!-- {{}} enclose string objects -->
+
+<hr>
+
+<button class="btn btn-outline-primary" (click)="onCreateServer()">Add server</button>
+
+<p>{{serverCreationStatus}}</p>
+
+<hr>
 
 <app-server></app-server>
 
