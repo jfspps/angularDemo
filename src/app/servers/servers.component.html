@@ -26,3 +26,10 @@
 <input type="text" class="form-control" [(ngModel)]="someString">
 <!-- trigger an event and update someString at the same time -->
 <p>{{ someString }}</p>
+
+<p *ngIf="inputText === 'secret code'; else noSecretCode">This text only shows if 'secret code' typed in the 'one-way' box above, according to the directive, which accesses and changes the DOM. Typed text is {{ inputText }}</p>
+<ng-template #noSecretCode>
+<p>
+    Enter the secret code in the text box labelled 'one-way'
+</p>
+</ng-template>
