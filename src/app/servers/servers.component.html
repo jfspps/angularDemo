@@ -13,16 +13,23 @@
 
 <hr>
 
-<app-server></app-server>
+<!-- Multiple instances of server-component are independent (observe online/offline status) -->
+<!-- forEach type syntax: let anyName of stack (array) -->
+<app-server *ngFor="let server of servers"></app-server>
 
 <label>Input some text ('one-way' binding: data moves from input box to paragraph):</label>
 <!-- $event is reserved word and used a argument token -->
 <input type="text" class="form-control" (input)="onTypeText($event)">
 <p>{{ inputText }}</p>
 
-<app-server></app-server>
-
 <label>Input some more text (two-way data-binding: data moves between both input box and paragraph):</label>
 <input type="text" class="form-control" [(ngModel)]="someString">
 <!-- trigger an event and update someString at the same time -->
 <p>{{ someString }}</p>
+
+<p *ngIf="inputText === 'secret code'; else noSecretCode">This text only shows if 'secret code' typed in the 'one-way' box above, according to the (structural) directive, which accesses and changes the DOM. Typed text is {{ inputText }}</p>
+<ng-template #noSecretCode>
+<p>
+    Enter the secret code in the text box labelled 'one-way'
+</p>
+</ng-template>
