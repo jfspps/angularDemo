@@ -13,6 +13,9 @@
 
 <hr>
 
+<!-- Multiple instances of server-component are independent (observe online/offline status) -->
+<app-server></app-server>
+
 <app-server></app-server>
 
 <label>Input some text ('one-way' binding: data moves from input box to paragraph):</label>
@@ -27,7 +30,7 @@
 <!-- trigger an event and update someString at the same time -->
 <p>{{ someString }}</p>
 
-<p *ngIf="inputText === 'secret code'; else noSecretCode">This text only shows if 'secret code' typed in the 'one-way' box above, according to the directive, which accesses and changes the DOM. Typed text is {{ inputText }}</p>
+<p *ngIf="inputText === 'secret code'; else noSecretCode">This text only shows if 'secret code' typed in the 'one-way' box above, according to the (structural) directive, which accesses and changes the DOM. Typed text is {{ inputText }}</p>
 <ng-template #noSecretCode>
 <p>
     Enter the secret code in the text box labelled 'one-way'
