@@ -10,7 +10,9 @@ export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created';
   inputText = 'Enter some text above';
-  someString = 'Note how the text is already preset here'
+  someString = 'Note how the text is already preset here';
+  serverName = 'Test Server';
+  servers = ['Test server', 'Test server 2'];
 
   constructor() {
     setTimeout(() => {
@@ -23,6 +25,7 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreationStatus = 'Server initiated';
+    this.servers.push(this.serverName);
   }
 
   onTypeText(event: Event){
